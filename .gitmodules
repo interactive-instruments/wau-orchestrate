@@ -1,0 +1,3 @@
+[submodule "orchestrate"]
+	path = orchestrate
+	url = https://github.com/dotwebstack/orchestrate.git

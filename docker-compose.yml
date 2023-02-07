@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+
+  wau:
+    image: docker.ci.interactive-instruments.de/iide/wau-orchestrate
+    restart: always
+    read_only: true
+    ports:
+      - 8080:8080
+
