@@ -11,6 +11,8 @@ FROM eclipse-temurin:17-jre-alpine
 
 COPY --from=build /src/target/app.jar /app/app.jar
 
+COPY --from=build /src/data /
+
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
 
 EXPOSE 8080
