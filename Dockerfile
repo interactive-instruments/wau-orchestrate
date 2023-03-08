@@ -11,7 +11,7 @@ FROM eclipse-temurin:17-jre-alpine
 
 COPY --from=build /src/target/app.jar /app/app.jar
 
-COPY --from=build /src/data /
+COPY --from=build /src/orchestrate/data /
 
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
 
