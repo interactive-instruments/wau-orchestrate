@@ -3,4 +3,4 @@
 	url = https://github.com/dotwebstack/orchestrate.git
 [submodule "WaU-UC2"]
 	path = WaU-UC2
-	url = git@github.com:Geonovum/WaU-UC2.git
+	url = https://github.com/Geonovum/WaU-UC2.git
