@@ -2,22 +2,31 @@
 clone: 
   git:
     image: woodpeckerci/plugin-git
-    when:
-      event: push
 
 pipeline:
 
-  docker:
+  orchestrate:
     image: docker.ci.interactive-instruments.de/cicd/drone-docker-buildx
     privileged: true
     settings:
       registry: docker.ci.interactive-instruments.de
-      repo: docker.ci.interactive-instruments.de/iide/wau-orchestrate
+      repo: docker.ci.interactive-instruments.de/wau/orchestrate
       tags: latest
       force_tag: true
       pull_image: true
       platforms:
         - linux/amd64
-#        - linux/arm64
-    when:
-      event: push
+
+  rest-api:
+    image: docker.ci.interactive-instruments.de/cicd/drone-docker-buildx
+    privileged: true
+    settings:
+      registry: docker.ci.interactive-instruments.de
+      repo: docker.ci.interactive-instruments.de/wau/rest-api
+      context: WaU-UC2/products/gebouw-rest-api
+      tags: latest
+      force_tag: true
+      pull_image: true
+      platforms:
+        - linux/amd64
+
