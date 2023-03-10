@@ -23,6 +23,7 @@ pipeline:
     settings:
       registry: docker.ci.interactive-instruments.de
       repo: docker.ci.interactive-instruments.de/wau/rest-api
+      dockerfile: WaU-UC2/products/gebouw-rest-api/Dockerfile
       context: WaU-UC2/products/gebouw-rest-api
       tags: latest
       force_tag: true
