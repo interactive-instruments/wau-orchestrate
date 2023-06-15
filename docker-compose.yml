@@ -3,8 +3,7 @@ version: '3.7'
 services:
 
   wau:
-    build: .
-#    image: docker.ci.interactive-instruments.de/iide/wau-orchestrate
+    image: docker.ci.interactive-instruments.de/iide/wau-orchestrate
     restart: always
     read_only: true
     ports:
